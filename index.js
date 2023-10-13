@@ -1,14 +1,14 @@
 const myKey =
   "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTI4ZWNmMjEzOWM0MzAwMTg4MTQ1NWUiLCJpYXQiOjE2OTcxODA5MTQsImV4cCI6MTY5ODM5MDUxNH0.kY5FnzXZgtD2s5Fb3YE44l7K-mQqJPDPwyQ61LjIcLU";
-
-const myList = [];
+let storageKey = "Key";
+const myList = JSON.parse(localStorage.getItem(storageKey)) || [];
 const addStorage = (e) => {
   const newTitle =
     e.target.parentElement.parentElement.querySelector(
       "h6.card-title"
     ).innerText;
   myList.push(newTitle);
-  let storageKey = "Key";
+
   localStorage.setItem(storageKey, JSON.stringify(myList));
   const myListUl = document.getElementById("myList");
   myListUl.innerHTML = ``;
