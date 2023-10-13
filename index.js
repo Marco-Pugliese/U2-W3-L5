@@ -65,7 +65,7 @@ const loadStorage = () => {
         const spinner = document.getElementById("spinner");
         spinner.classList.add("d-none");
         newDiv.innerHTML = `
-        <div class="card">
+        <div class="card shadow">
          <div>
           <a href="./details.html?productId=${product[i]._id}"> <img src="${
           product[i].imageUrl

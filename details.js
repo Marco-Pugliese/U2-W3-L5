@@ -23,7 +23,7 @@ const getDetails = () => {
       newDiv.classList.add("col-10", "col-xl-8", "col-xxl-6", "my-5");
       const spinner = document.getElementById("spinner");
       spinner.classList.add("d-none");
-      newDiv.innerHTML = `<div class="card">
+      newDiv.innerHTML = `<div class="card shadow">
       <img src="${info.imageUrl}" class="card-img-top" alt="${info.name}">
       <div class="card-body d-flex flex-column align-items-center justify-content-center">
         <h5 class="card-title text-center fw-bold my-4">${info.name}</h5>
